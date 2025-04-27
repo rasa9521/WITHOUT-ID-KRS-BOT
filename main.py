@@ -38,11 +38,11 @@ import logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 image_list = [
-"https://graph.org/file/8b1f4146a8d6b43e5b2bc-be490579da043504d5.jpg",
-"https://graph.org/file/b75dab2b3f7eaff612391-282aa53538fd3198d4.jpg",
-"https://graph.org/file/38de0b45dd9144e524a33-0205892dd05593774b.jpg",
-"https://graph.org/file/be39f0eebb9b66d7d6bc9-59af2f46a4a8c510b7.jpg",
-"https://graph.org/file/8b7e3d10e362a2850ba0a-f7c7c46e9f4f50b10b.jpg",
+"https://i.ibb.co/XxDwyHJV/file-1258.jpg",
+"https://i.ibb.co/XxDwyHJV/file-1258.jpg",
+"https://i.ibb.co/XxDwyHJV/file-1258.jpg",
+"https://i.ibb.co/XxDwyHJV/file-1258.jpg",
+"https://i.ibb.co/XxDwyHJV/file-1258.jpg",
 ]
 print(4321)
 bot = Client(
@@ -57,13 +57,13 @@ async def start(bot, message):
 
   keyboard = [
     [
-      InlineKeyboardButton("🚀 Physics Wallah without Purchase 🚀", callback_data="pwwp")
+      InlineKeyboardButton("🔘 Physics Wallah without Purchase 🔘", callback_data="pwwp")
     ],
     [
-      InlineKeyboardButton("📘 Classplus without Purchase 📘", callback_data="cpwp")
+      InlineKeyboardButton("🔘 Classplus without Purchase 🔘", callback_data="cpwp")
     ],
     [
-      InlineKeyboardButton("📒 Appx Without Purchase 📒", callback_data="appxwp")
+      InlineKeyboardButton("🔘 Appx Without Purchase 🔘", callback_data="appxwp")
     ]
   ]
 
@@ -71,7 +71,7 @@ async def start(bot, message):
 
   await message.reply_photo(
     photo=random_image_url,
-    caption="**Developer - @pwextractowner\nPLEASE👇PRESS👇HERE**",
+    caption="**Developer - @@krs_study_helper_bbot\nJAI BAJRANG BALI👇**",
     quote=True,
     reply_markup=reply_markup
   )
