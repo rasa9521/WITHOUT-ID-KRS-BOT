@@ -66,11 +66,12 @@ image_list = [
 "https://unitedcamps.in/Images/IMG_1744262656.jpg",
 ]
 print(4321)
-#bot = Client(
-    #"bot",
-    #api_id=27900743,
-    #api_hash=ebb06ea8d41420e60b29140dcee902fc,
-    #bot_token=8194163011:AAH-mTmPMDuHFlKgc9xizS1zBKoBJc_eQgE)
+
+bot = Client(
+    "bot",
+    api_id=API_ID,
+    api_hash=API_HASH,
+    bot_token=BOT_TOKEN)
 
 
 @bot.on_message(filters.command(["start"]))
