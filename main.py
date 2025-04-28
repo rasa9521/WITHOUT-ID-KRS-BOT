@@ -37,19 +37,39 @@ THREADPOOL = ThreadPoolExecutor(max_workers=1000)
 import logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
+# Bot credentials from environment variables (Render compatible)
+API_ID = int(os.environ.get("API_ID",  "27900743"))
+API_HASH = os.environ.get("API_HASH", "ebb06ea8d41420e60b29140dcee902fc")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "7689384650:AAHf9F19sxxg_B85x3T-sjhsE0BOUcrf5oo")
+
+# Initialize Bot Globally (IMPORTANT FIX)
+bot = Client("bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
+
+        
+# Flask app for Render
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Bot is running!"
+
+def run_flask():
+    app.run(host="0.0.0.0", port=8080) # Use here 8080 port,if you are deploying it on koyeb
+    
 image_list = [
-"https://i.ibb.co/XxDwyHJV/file-1258.jpg",
-"https://i.ibb.co/XxDwyHJV/file-1258.jpg",
-"https://i.ibb.co/XxDwyHJV/file-1258.jpg",
-"https://i.ibb.co/XxDwyHJV/file-1258.jpg",
-"https://i.ibb.co/XxDwyHJV/file-1258.jpg",
+"https://unitedcamps.in/Images/IMG_1744262656.jpg",
+"https://unitedcamps.in/Images/IMG_1744262656.jpg",
+"https://unitedcamps.in/Images/IMG_1744262656.jpg",
+"https://unitedcamps.in/Images/IMG_1744262656.jpg",
+"https://unitedcamps.in/Images/IMG_1744262656.jpg",
 ]
 print(4321)
-bot = Client(
-    "bot",
-    api_id=api_id,
-    api_hash=api_hash,
-    bot_token=bot_token)
+#bot = Client(
+    #"bot",
+    #api_id=27900743,
+    #api_hash=ebb06ea8d41420e60b29140dcee902fc,
+    #bot_token=7689384650:AAHf9F19sxxg_B85x3T-sjhsE0BOUcrf5oo)
+
 
 @bot.on_message(filters.command(["start"]))
 async def start(bot, message):
