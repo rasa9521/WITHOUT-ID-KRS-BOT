@@ -39,15 +39,15 @@ THREADPOOL = ThreadPoolExecutor(max_workers=1000)
 import logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
+
 # Bot credentials from environment variables (Render compatible)
-API_ID = int(os.environ.get("API_ID",  "27900743"))
+API_ID = int(os.environ.get("API_ID", 27900743))
 API_HASH = os.environ.get("API_HASH", "ebb06ea8d41420e60b29140dcee902fc")
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "8194163011:AAH-mTmPMDuHFlKgc9xizS1zBKoBJc_eQgE")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "7850491064:AAHw_g0tbwUWzStzu-BHN4TKiZR8SgMDyrY")
 
 # Initialize Bot Globally (IMPORTANT FIX)
 bot = Client("bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
-        
 # Flask app for Render
 app = Flask(__name__)
 
@@ -56,22 +56,17 @@ def home():
     return "Bot is running!"
 
 def run_flask():
-    app.run(host="0.0.0.0", port=8080) # Use here 8080 port,if you are deploying it on koyeb
+    app.run(host="0.0.0.0", port=8080) #Use 8080 Port here, if you're deploying it on koyeb
     
+
 image_list = [
-"https://unitedcamps.in/Images/IMG_1744262656.jpg",
-"https://unitedcamps.in/Images/IMG_1744262656.jpg",
-"https://unitedcamps.in/Images/IMG_1744262656.jpg",
-"https://unitedcamps.in/Images/IMG_1744262656.jpg",
-"https://unitedcamps.in/Images/IMG_1744262656.jpg",
+"https://i.ibb.co/XxDwyHJV/file-1258.jpg",
+"https://i.ibb.co/XxDwyHJV/file-1258.jpg",
+"https://i.ibb.co/XxDwyHJV/file-1258.jpg",
+"https://i.ibb.co/XxDwyHJV/file-1258.jpg",
+"https://i.ibb.co/XxDwyHJV/file-1258.jpg",
 ]
 print(4321)
-
-bot = Client(
-    "bot",
-    api_id=API_ID,
-    api_hash=API_HASH,
-    bot_token=BOT_TOKEN)
 
 
 @bot.on_message(filters.command(["start"]))
@@ -94,7 +89,7 @@ async def start(bot, message):
 
   await message.reply_photo(
     photo=random_image_url,
-    caption="**Developer - @@krs_study_helper_bbot\nJAI BAJRANG BALI👇**",
+    caption="**☑️ JAI BAJRANG BALI ☑️**",
     quote=True,
     reply_markup=reply_markup
   )
@@ -1670,5 +1665,8 @@ async def process_appxwp(bot: Client, m: Message, user_id: int):
             await CONNECTOR.close()
 
 
+# Start Flask + Bot
+if __name__ == "__main__":
+    threading.Thread(target=run_flask).start()
+    bot.run()
                                         
-bot.run()
