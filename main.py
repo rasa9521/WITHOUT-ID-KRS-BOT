@@ -82,6 +82,10 @@ async def start(bot, message):
     ],
     [
       InlineKeyboardButton("🔘 Appx Without Purchase 🔘", callback_data="appxwp")
+    ],
+    [
+      InlineKeyboardButton(text="📞 Contact", url="http://t.me/krs_study_helper_bbot"),
+      InlineKeyboardButton(text="🔍 Channel", url="http://t.me/krs_study_helper_bbot"),
     ]
   ]
 
