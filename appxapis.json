@@ -8236,6 +8236,10 @@
         "api": "https://successpointapi.classx.co.in"
     },
     {
+        "name": "Successpointbarmer",
+        "api": "https://successpointbarmerapi.akamai.net.in/"
+    },
+    {
         "name": "Successseries",
         "api": "https://successseriesmumbaiapi.classx.co.in"
     },
