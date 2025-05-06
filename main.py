@@ -93,7 +93,17 @@ async def start(bot, message):
 
   await message.reply_photo(
     photo=random_image_url,
-    caption="**☑️ JAI BAJRANG BALI ☑️**",
+    caption="**🔘 Hey! I'm All-in-one Txt Extractor Bot! 🔘
+
+
+🔘 If you run into any issue or have trouble extracting a text file, feel free to reach out to Admin.
+
+🔘 Have an app you'd like to add? Don't hesitate to contact me anytime!
+
+
+🔘 Select an option below to get started!
+
+ ☑️ JAI BAJRANG BALI ☑️**",
     quote=True,
     reply_markup=reply_markup
   )
