@@ -684,6 +684,10 @@
         "api": "https://apnipathshalaapi.classx.co.in"
     },
     {
+        "name": "Apnitaiyari",
+        "api": "https://apnitaiyariapi.akamai.net.in/"
+    },
+    {
         "name": "Apnischool",
         "api": "https://apnischoolapi.classx.co.in"
     },
