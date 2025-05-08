@@ -3672,6 +3672,10 @@
         "api": "https://iasplusapi.classx.co.in"
     },
     {
+        "name": "Iassetulearningapp",
+        "api": "https://iassetulearningappapi.akamai.net.in"
+    },
+    {
         "name": "Iceonline",
         "api": "https://iceonlineapi.classx.co.in"
     },
