@@ -38,7 +38,10 @@ from concurrent.futures import ThreadPoolExecutor
 THREADPOOL = ThreadPoolExecutor(max_workers=1000)
 import logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+from config import PREMIUM_LOGS
 
+log_channel = PREMIUM_LOGS
+log_channel2 = PREMIUM_LOGS
 
 # Bot credentials from environment variables (Render compatible)
 API_ID = int(os.environ.get("API_ID", 27900743))
